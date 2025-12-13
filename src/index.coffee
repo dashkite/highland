@@ -1,6 +1,4 @@
 import { metaclass } from "@dashkite/joy/metaclass"
-import { parse } from "./parse"
-import { format } from "./format"
 
 class Theory extends metaclass()
 
@@ -12,7 +10,7 @@ class Theory extends metaclass()
     key: -> @toString()
 
   toString: ->
-    "Theory(#{ format @program })"
+    
 
   clone: ->
     @constructor.make @task, format @program
